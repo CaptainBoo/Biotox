@@ -1,0 +1,53 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "biotox.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "biotox.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 221,
+                "y": 100.33333333333331
+            }
+        },
+        "grass.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "level.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 2
+        },
+        "plains.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "C:/Users/eddie/OneDrive/Documents/GitHub/Biotox/assets/mystic_woods_assetpack/mystic_woods_free_2.1/sprites/tilesets",
+    "map.lastUsedFormat": "tmx",
+    "map.width": 25,
+    "openFiles": [
+        "biotox.tmx",
+        "plains.tsx",
+        "grass.tsx"
+    ],
+    "project": "biotox.tiled-project",
+    "recentFiles": [
+        "grass.tsx",
+        "plains.tsx",
+        "biotox.tmx",
+        "level.tsx"
+    ],
+    "resizeMap.removeObjects": true,
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}
