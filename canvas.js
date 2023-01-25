@@ -1,5 +1,14 @@
-const canvas = document.getElementById("mainCanvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getElementById('mainCanvas');
+const ctx = canvas.getContext('2d');
 
-ctx.fillStyle = "blue";
+canvas.width = 1280;
+canvas.height = 768;
+
+ctx.fillStyle = 'white';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+const image = new Image();
+image.onload = () => {
+	ctx.drawImage(image, 0, 0);
+};
+image.src = 'img/gameMap1.png';
