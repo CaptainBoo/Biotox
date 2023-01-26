@@ -7,6 +7,40 @@ canvas.height = 768;
 ctx.fillStyle = 'white';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+const placementTilesData2D = [];
+
+for (let i = 0; i < placementTilesData.length; i += 20) {
+	placementTilesData2D.push(placementTilesData.slice(i, i + 20));
+}
+
+class PlacementTile {
+	constructor({ position = { x: 0, y: 0 } }) {
+		this.position = position;
+		this.size = 64;
+		this.color = 'rgba(255, 255, 255, 0.15)';
+	}
+
+	draw() {
+		ctx.fillStyle = this.color;
+		ctx.fillRect(this.position.x, this.position.y, this.size, this.size);
+	}
+}
+
+const placementTiles = [];
+
+placementTilesData2D.forEach((row, y) => {
+	row.forEach((symbol, x) => {
+		if (symbol === 14) {
+			// add building placement tile here
+			placementTiles.push(
+				new PlacementTile({ position: { x: x * 64, y: y * 64 } })
+			);
+		}
+	});
+});
+
+console.log(placementTiles);
+
 const image = new Image();
 image.onload = () => {
 	animate();
@@ -69,5 +103,8 @@ function animate() {
 	ctx.drawImage(image, 0, 0);
 	enemies.forEach((enemy) => {
 		enemy.update();
+	});
+	placementTiles.forEach((tile) => {
+		tile.draw();
 	});
 }
